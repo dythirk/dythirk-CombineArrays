@@ -20,7 +20,10 @@ public class CombineArrays {
         for (int i = 0; i < arr2.length; i++){
             combined.add(arr2[i]);
         }
-        int[] mega = combined.toArray();
+        int[] mega = new int[(arr1.length+arr2.length)];
+        for(int i=0; i < (arr1.length+arr2.length); i++) {
+            mega[i] = combined.get(i);
+        }
         return mega;
     }
 }
