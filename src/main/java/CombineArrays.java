@@ -9,7 +9,6 @@ public class CombineArrays {
      * @return an array containing the contents of arr1 followed by the contents of arr2.
      */
 
- //   ArrayList<Integer> combined = new ArrayList<Integer>();
     ArrayList<Integer> combined = new ArrayList<Integer>();
     public int[] combine(int[] arr1, int[] arr2){
 
