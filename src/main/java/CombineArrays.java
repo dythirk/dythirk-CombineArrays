@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class CombineArrays {
     /**
      * Combine two arrays into a single array and return it.
@@ -9,20 +7,23 @@ public class CombineArrays {
      * @return an array containing the contents of arr1 followed by the contents of arr2.
      */
 
-    ArrayList<Integer> combined = new ArrayList<Integer>();
     public int[] combine(int[] arr1, int[] arr2){
+//     ArrayList<Integer> combined = new ArrayList<Integer>();
+
+        int final_size;
+        final_size = arr1.length + arr2.length;
+        int[] combined = new int[final_size];
 
         for (int i = 0; i < arr1.length; i++){
-            combined.add(arr1[i]);
+            combined[i] = arr1[i];
         }
+        int j = 0;
       
-        for (int i = 0; i < arr2.length; i++){
-            combined.add(arr2[i]);
+        for (int i = arr1.length; i < (arr1.length + arr2.length); i++){
+            combined[i] = arr2[j];
+            j++;
         }
-        int[] mega = new int[(arr1.length+arr2.length)];
-        for(int i=0; i < (arr1.length+arr2.length); i++) {
-            mega[i] = combined.get(i);
-        }
-        return mega;
+
+        return combined;
     }
 }
